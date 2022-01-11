@@ -1,0 +1,48 @@
+@import './color.scss';
+
+.ft-title{
+  color: $em-black;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.ft-subtitle{
+  color: $em-black-1;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.ft-text{
+  color: $em-black-2;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.ft-subtext{
+  color: $em-black-3;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.ft-lv1{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ft-lv2{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.ft-lv3{
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.ft-lv4{
+  font-size: 14px;
+}
+
+.ft-lv5{
+  font-size: 12px;
+}
