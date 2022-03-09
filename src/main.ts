@@ -6,6 +6,7 @@ import SvgIcon from 'vue-svgicon'
 
 // import '@/styles/element-variables.scss'
 import '@/styles/index.scss'
+import '@/packages/theme/var.scss'
 import '@/icons/components'
 
 // import Em from '@/packages/index'

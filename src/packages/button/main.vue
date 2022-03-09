@@ -33,7 +33,7 @@ export default class Embutton extends Vue {
   private icon!: string
 
   @Prop({ type: String, default: 'mini' })
-  private size!: string
+  private size!: ButtonSize
 
   @Prop({ type: Boolean, default: !1 })
   private disabled!: boolean
@@ -43,7 +43,7 @@ export default class Embutton extends Vue {
     const round = this.round ? ' is-round' : ''
     const circle = this.circle ? ' is-circle' : ''
     const disabled = this.disabled ? ' is-disabled' : ''
-    const loading = this.disabled ? ' is-loading' : ''
+    const loading = this.loading ? ' is-loading' : ''
     const size = this.size ? ` em-button--${this.size}` : ''
     return `em-button em-button--${this.type}${plain}${circle}${disabled}${round}${loading}${size}`
   }

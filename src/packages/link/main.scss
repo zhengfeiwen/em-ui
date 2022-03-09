@@ -1,0 +1,10 @@
+.em-link {
+  svg + span,i + span {
+    margin-left: 5px;
+  }
+  span{
+    svg,i {
+      margin-left: 5px;
+    }
+  }
+}

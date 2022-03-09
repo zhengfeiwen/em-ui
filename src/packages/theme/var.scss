@@ -1,0 +1,82 @@
+@use 'sass:map';
+
+// CSS3 var
+@use 'common/var' as *;
+@use 'mixins/var' as *;
+
+// for better performance do not dynamically change the root variable if you really
+// do not need that, since this could introduce recalculation overhead for rendering.
+// https://lisilinhart.info/posts/css-variables-performance/
+
+:root {
+  --em-color-white: #{$color-white};
+  --em-color-black: #{$color-black};
+
+  --em-color-primary: #{$color-primary};
+
+  // get rgb
+  @each $type in (primary, success, warning, danger, error, info) {
+    @include set-css-color-rgb($type);
+  }
+
+  @for $i from 1 through 9 {
+    @include set-css-color-type-light('primary', $i);
+  }
+  --em-color-primary-dark-2: #{map.get($colors, 'primary', 'dark-2')};
+
+  // --em-color-#{$type}
+  // --em-color-#{$type}-light-{$i}
+  @each $type in (success, warning, danger, error, info) {
+    @include set-css-color-type($type);
+  }
+
+  // Background
+  --em-bg-color: #{$bg-color};
+
+  // Border
+  --em-border-width-base: #{$border-width-base};
+  --em-border-style-base: #{$border-style-base};
+  --em-border-color-hover: #{$border-color-hover};
+  --em-border-base: var(--em-border-width-base) var(--em-border-style-base)
+    var(--em-border-color-base);
+
+  // Svg
+  --em-svg-monochrome-grey: #dcdde0;
+
+  // Fill
+  --em-fill-base: var(--em-color-white);
+
+  // Typography
+  @include set-component-css-var('font-size', $font-size);
+
+  --em-font-weight-primary: 500;
+  --em-font-line-height-primary: 24px;
+  --em-text-color-disabled-base: #bbb;
+
+  // z-index
+  --em-index-normal: 1;
+  --em-index-top: 1000;
+  --em-index-popper: 2000;
+
+  // --em-text-color-#{$type}
+  @include set-component-css-var('text-color', $text-color);
+  // --em-border-color-#{$type}
+  @include set-component-css-var('border-color', $border-color);
+  // --em-border-radius-#{$type}
+  @include set-component-css-var('border-radius', $border-radius);
+  // Box-shadow
+  // --em-box-shadow-#{$type}
+  @include set-component-css-var('box-shadow', $box-shadow);
+  // Disable base
+  @include set-component-css-var('disabled', $disabled);
+
+  /* Transition
+-------------------------- */
+  // refer to this website to get the bezier motion function detail
+  //  https://cubic-bezier.com/#p1,p2,p3,p4 (change px as your function parameter)
+  --em-transition-duration: #{map.get($transition-duration, 'default')};
+  --em-transition-duration-fast: #{map.get($transition-duration, 'fast')};
+
+  @include set-component-css-var('transition-function', $transition-function);
+  @include set-component-css-var('transition', $transition);
+}
