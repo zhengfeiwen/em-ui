@@ -6,7 +6,8 @@
       <em-border-demo></em-border-demo>
       <em-container-demo></em-container-demo>
       <em-layout-demo></em-layout-demo> -->
-      <em-link-demo></em-link-demo>
+      <!-- <em-link-demo></em-link-demo> -->
+      <em-input-demo></em-input-demo>
     </div>
   </div>
 </template>
@@ -19,6 +20,7 @@ import BorderDemo from './examples/components/border/index.vue'
 import ContainerDemo from './examples/components/container/index.vue'
 import LayoutDemo from './examples/components/layout/index.vue'
 import LinkDemo from './examples/components/link/index.vue'
+import InputDemo from './examples/components/input/index.vue'
 @Component({
   components: {
     'em-button-demo': ButtonDemo,
@@ -26,7 +28,8 @@ import LinkDemo from './examples/components/link/index.vue'
     'em-border-demo': BorderDemo,
     'em-container-demo': ContainerDemo,
     'em-layout-demo': LayoutDemo,
-    'em-link-demo': LinkDemo
+    'em-link-demo': LinkDemo,
+    'em-input-demo': InputDemo
   }
 })
 export default class App extends Vue {
