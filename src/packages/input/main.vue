@@ -243,12 +243,12 @@ export default class EmInput extends Vue {
       const minRows = autosize.minRows
       const maxRows = autosize.maxRows
       this.props._textareaCalcStyle = {
-        ...this.$el.style,
+        ...(this.$el as any).style,
         ...calcTextareaHeight(this.$refs.textarea as HTMLTextAreaElement, minRows, maxRows)
       }
     } else {
       this.props._textareaCalcStyle = {
-        ...this.$el.style,
+        ...(this.$el as any).style,
         minHeight: calcTextareaHeight(this.$refs.textarea as HTMLTextAreaElement).minHeight
       }
     }
