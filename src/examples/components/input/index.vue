@@ -6,7 +6,7 @@
     <em-input v-model="val" maxlength="10" :show-word-limit="!0" size="small" :clearable="!0"></em-input>
     <!-- <em-input size="small"><em-icon slot="suffix" svg="user"></em-icon></em-input> -->
     <hr>
-    <em-input style="color: red;" v-model="val" type="textarea" maxlength="10" :show-word-limit="!0" :autosize="{minRows: 33, maxRows: 33}"></em-input>
+    <em-input style="color: red;font-size: 30px;" v-model="val" type="textarea" maxlength="10" :show-word-limit="!0" :autosize="{minRows: 33, maxRows: 33}"></em-input>
   </div>
 </template>
 
