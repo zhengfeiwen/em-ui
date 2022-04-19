@@ -1,10 +1,12 @@
 <template>
-  <div style="width: 120px;">
-    <em-input type="primary" prefix-svg="zip"></em-input>
-    <em-input type="primary" size="small"><em-icon slot="prefix" svg="user"></em-icon></em-input>
-    <em-input type="primary" size="small" suffix-svg="zip"></em-input>
-    <em-input v-model="val" type="primary" size="small" :clearable="!0"></em-input>{{val}}
-    <em-input type="primary" size="small"><em-icon slot="suffix" svg="user"></em-icon></em-input>
+  <div style="width: 500px;">
+    <!-- <em-input prefix-svg="zip"></em-input>
+    <em-input size="small"><em-icon slot="prefix" svg="user"></em-icon></em-input>
+    <em-input size="small" suffix-svg="zip"></em-input> -->
+    <em-input v-model="val" maxlength="10" :show-word-limit="!0" size="small" :clearable="!0"></em-input>
+    <!-- <em-input size="small"><em-icon slot="suffix" svg="user"></em-icon></em-input> -->
+    <hr>
+    <em-input style="color: red;" v-model="val" type="textarea" maxlength="10" :show-word-limit="!0" :autosize="{minRows: 33, maxRows: 33}"></em-input>
   </div>
 </template>
 
@@ -29,5 +31,5 @@ export default class InputDemo extends Vue {
 </script>
 
 <style>
-.em-input{ margin-right: 10px;}
+  .em-input{ margin-right: 10px;}
 </style>

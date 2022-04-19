@@ -104,7 +104,7 @@
 
   @include when(exceed) {
     .#{$namespace}-textarea__inner {
-      border-color: var(--em-color-danger);
+      border: 1px solid var(--em-color-danger);
     }
 
     .#{$namespace}-input__count {
